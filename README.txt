@@ -1,6 +1,6 @@
 webcamthree
 https://github.com/chazmatazz/webcamthree
-JavaScript library for webcam output. Interfaces with Flash AS3. 
+JavaScript/Flash library for webcam output. Interfaces with Flash AS3. 
 Includes black and white output, useful for tracking fiducials.
 
 Copyright (c) 2011 Charles Dietrich http://www.charlesdietrich.com

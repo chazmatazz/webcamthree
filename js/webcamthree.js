@@ -50,7 +50,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 webcamThree = function() {
-    var DELAY = 500;
+    var DELAY = 300;
     var flash = null;
     var canvas_container = null;
     var canvas_context = null;
@@ -91,10 +91,10 @@ webcamThree = function() {
         setInterval(f, DELAY);
     }
 
-    function passRGBLine (stringPixels) {
+    function passRGBData (stringPixels) {
         var coll = stringPixels.split("-");
 
-        for(var i = 0; i < width; i++) {
+        for(var i = 0; i < coll.length; i++) {
             var intVal = parseInt(coll[i]);
             r = (intVal >> 16) & 0xff;
             g = (intVal >> 8) & 0xff;
@@ -113,8 +113,8 @@ webcamThree = function() {
         }
     }
 
-    function passBWLine (stringPixels) {
-        for(var i = 0; i < width; i++) {
+    function passBWData (stringPixels) {
+        for(var i = 0; i < stringPixels.length; i++) {
             var val = 255 * stringPixels[i];
             image_data.data[counter + 0] = val;
             image_data.data[counter + 1] = val;
@@ -136,8 +136,8 @@ webcamThree = function() {
     return {
         init: init,
         startCapture: startCapture,
-        passRGBLine: passRGBLine,
-        passBWLine: passBWLine,
+        passRGBData: passRGBData,
+        passBWData: passBWData,
         flash_notify: flash_notify
     };
 }();
