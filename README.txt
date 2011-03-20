@@ -41,6 +41,9 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+Adaptive Image Thresholding
+Adapted from http://blog.inspirit.ru/?p=322
+
 OVERVIEW
 
 Instructions: Put index.html on a web server and open it.
